@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Threeld Anniversary ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+ background:radial-gradient(ellipse at top,#47203f,#180d23 55%,#090711);
+ color:white;
+ font-family:Poppins,sans-serif;
+ overflow-x:hidden;
+}
+
+.hidden{display:none!important}
+.script{font-family:'Great Vibes',cursive;color:#ffabd2}
+
+button{cursor:pointer;font-family:inherit}
+
+section{
+ max-width:950px;
+ margin:auto;
+ padding:85px 25px;
+ text-align:center;
+}
+
+.btn{
+ padding:14px 30px;
+ background:linear-gradient(120deg,#ff559e,#a94bba);
+ border:none;
+ color:white;
+ border-radius:40px;
+ font-size:15px;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:translateY(-4px);
+ box-shadow:0 0 25px #e96eae;
+}
+
+#login{
+ min-height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ padding:25px;
+ text-align:center;
+}
+
+.login-card{
+ width:min(100%,480px);
+ padding:50px 25px;
+ background:rgba(255,255,255,.055);
+ border:1px solid rgba(255,160,210,.35);
+ border-radius:30px;
+ box-shadow:0 0 70px rgba(255,60,150,.12);
+}
+
+.login-card h1{
+ font-size:clamp(38px,8vw,55px);
+ font-weight:400;
+ margin:15px 0;
+}
+
+.login-card p{color:#e8cbdc;line-height:1.9}
+
+.big-heart{
+ font-size:75px;
+ animation:beat 1.5s infinite;
+}
+
+@keyframes beat{
+ 50%{transform:scale(1.15)}
+}
+
+input{
+ width:100%;
+ padding:16px;
+ margin:25px 0 15px;
+ background:#24152d;
+ border:1px solid #bd6799;
+ border-radius:30px;
+ color:white;
+ text-align:center;
+ font-size:15px;
+ outline:none;
+}
+
+.hero{
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ padding:35px 20px;
+ text-align:center;
+}
+
+.hero h1{
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(60px,12vw,110px);
+ color:#ffabd2;
+ font-weight:400;
+ text-shadow:0 0 35px #e34b9d;
+}
+
+.subtitle{
+ letter-spacing:5px;
+ font-size:12px;
+ color:#f4c6df;
+ margin:20px 0;
+}
+
+.main-quote{
+ font-family:'Playfair Display',serif;
+ font-size:clamp(25px,5vw,43px);
+ font-style:italic;
+ max-width:800px;
+ line-height:1.6;
+ margin:35px 0;
+ color:#ffe0ef;
+}
+
+.section-title{
+ color:#ffb5d7;
+ font-size:clamp(28px,5vw,38px);
+ margin-bottom:30px;
+ font-family:'Playfair Display',serif;
+}
+
+.paragraph{
+ color:#f1dce9;
+ font-size:16px;
+ line-height:2.1;
+ max-width:750px;
+ margin:20px auto;
+}
+
+.glass{
+ background:rgba(255,255,255,.055);
+ border:1px solid rgba(255,160,210,.2);
+ border-radius:25px;
+ padding:35px;
+ margin:25px auto;
+}
+
+.big-quote{
+ font-family:'Playfair Display',serif;
+ font-size:clamp(28px,5vw,45px);
+ line-height:1.55;
+ font-style:italic;
+ color:#ffb6d8;
+ margin:25px 0;
+}
+
+.divider{
+ width:100px;
+ height:2px;
+ background:#ff85bc;
+ margin:30px auto;
+}
+
+.gift-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+ gap:18px;
+ margin-top:40px;
+}
+
+.gift{
+ min-height:155px;
+ background:linear-gradient(145deg,rgba(255,110,180,.12),rgba(120,50,130,.12));
+ border:1px solid rgba(255,155,200,.35);
+ border-radius:22px;
+ padding:25px 12px;
+ color:white;
+ transition:.35s;
+}
+
+.gift:hover{
+ transform:translateY(-8px) scale(1.03);
+ background:rgba(255,90,170,.22);
+ box-shadow:0 0 30px rgba(255,100,180,.2);
+}
+
+.gift-icon{
+ font-size:45px;
+ display:block;
+ margin-bottom:12px;
+}
+
+.gift p{font-size:14px;color:#ffe0ef}
+
+#gift-message{
+ margin-top:35px;
+ padding:35px 25px;
+ border-radius:25px;
+ background:rgba(255,110,180,.12);
+ border:1px solid #ed82b7;
+ line-height:2;
+ color:#ffe4f0;
+}
+
+.language{
+ padding:25px;
+ background:rgba(255,255,255,.05);
+ border-radius:20px;
+ border:1px solid rgba(255,150,200,.2);
+ margin:18px 0;
+ line-height:2;
+}
+
+.language h3{color:#ffabd2;margin-bottom:12px}
+.translation{font-size:21px;color:#fff0f7}
+
+.hug{
+ font-size:100px;
+ animation:beat 2s infinite;
+}
+
+.heart{
+ position:fixed;
+ bottom:-30px;
+ color:#ff8cbe;
+ opacity:.55;
+ pointer-events:none;
+ z-index:0;
+ animation:floatUp 12s linear infinite;
+}
+
+@keyframes floatUp{
+ from{transform:translateY(0) rotate(0);opacity:.6}
+ to{transform:translateY(-115vh) rotate(360deg);opacity:0}
+}
+
+main{position:relative;z-index:1}
+
+footer{
+ text-align:center;
+ padding:65px 20px;
+ border-top:1px solid rgba(255,150,200,.15);
+ color:#e7b9d4;
+ line-height:2;
+}
+
+@media(max-width:600px){
+ section{padding:65px 20px}
+ .glass{padding:25px 18px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<!-- PASSWORD SCREEN -->
+
+<div id="login">
+ <div class="login-card">
+  <div class="big-heart">💗</div>
+
+  <h1 class="script">A Little World For You</h1>
+
+  <p>
+   Three years of memories.<br>
+   One love. One beautiful story.<br>
+   And a thousand more dreams.
+  </p>
+
+  <input
+   type="password"
+   id="pass"
+   placeholder="Enter our secret password"
+  >
+
+  <button class="btn" onclick="unlock()">
+   Open My Heart ❤️
+  </button>
+
+  <p id="error" style="color:#ff9abd;margin-top:15px"></p>
+ </div>
+</div>
+
+<main id="website" class="hidden">
+
+<!-- WELCOME -->
+
+<div class="hero">
+
+ <div style="font-size:65px">🌙 💗 🌹</div>
+
+ <p class="subtitle">A STORY WRITTEN BY TWO HEARTS</p>
+
+ <h1>Happy Threeld Anniversary</h1>
+
+ <div class="main-quote">
+  "If I had a thousand lifetimes,
+  I would still wish to find you in every single one."
+ </div>
+
+ <div class="divider"></div>
+
+ <p class="paragraph">
+  Welcome to our little universe.
+  A place where distance doesn't matter,
+  where memories live forever,
+  and where every little thing reminds me of you.
+ </p>
+
+ <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+  Enter Our Story ↓
+ </button>
+
+</div>
+
+<!-- LETTER -->
+
+<section id="letter">
+
+ <h2 class="section-title">Dear My Favourite Person,</h2>
+
+ <div class="glass">
+
+  <p class="paragraph">
+   Three years. Think about that.
+   Three years of conversations, laughter,
+   memories, little arguments, forgiveness,
+   and countless moments that became special
+   simply because you were a part of them.
+  </p>
+
+  <p class="paragraph">
+   Sometimes I wish the world were a little smaller.
+   I wish I could just appear beside you,
+   hold your hand, look into your eyes
+   and tell you everything that words
+   have never been able to explain.
+  </p>
+
+  <p class="paragraph">
+   I want to spend my life with you.
+   Not only the beautiful days,
+   but also the ordinary ones.
+   I want the mornings, the evenings,
+   the silly conversations, the adventures,
+   the peaceful moments and everything in between.
+  </p>
+
+  <p class="big-quote">
+   "I don't just want you in my favourite memories.
+   I want you in all the memories I haven't made yet."
+  </p>
+
+  <p class="paragraph">
+   I love you so much.
+   More than a message can explain,
+   more than a website can display,
+   and more than these paragraphs could ever contain.
+  </p>
+
+ </div>
+</section>
+
+<!-- LONG DISTANCE -->
+
+<section>
+
+ <h2 class="section-title">Until The Day I Reach You</h2>
+
+ <div class="hug">🫂</div>
+
+ <div class="glass">
+
+  <p class="big-quote">
+   "One day, I won't have to send you a hug.
+   I'll finally be there to give you one."
+  </p>
+
+  <p class="paragraph">
+   Until that day, let the distance do whatever it wants.
+   Let the kilometres exist.
+   Let the clocks keep moving.
+   I will keep looking forward to the moment
+   when we finally get to share the same place.
+  </p>
+
+  <p class="paragraph">
+   I imagine us walking together,
+   exploring new places, drinking tea,
+   laughing about the smallest things
+   and making memories that no screen
+   could ever capture.
+  </p>
+
+  <p class="big-quote">
+   "I'm not dreaming of a perfect world.
+   I'm dreaming of an ordinary world
+   where you're beside me."
+  </p>
+
+ </div>
+</section>
+
+<!-- PROMISE -->
+
+<section>
+
+ <h2 class="section-title">A Promise From My Heart</h2>
+
+ <div class="glass">
+
+  <p class="paragraph">
+   I cannot promise that every day will be perfect.
+   But I can promise that I will try to understand,
+   communicate, respect your feelings
+   and never take your presence for granted.
+  </p>
+
+  <p class="paragraph">
+   I want us to grow, support each other's dreams,
+   celebrate happiness and stand beside each other
+   through the different chapters of life.
+  </p>
+
+  <p class="big-quote">
+   "I don't want a temporary chapter.
+   I hope we get to write a beautiful lifetime."
+  </p>
+
+ </div>
+</section>
+
+<!-- GIFTS -->
+
+<section>
+
+ <h2 class="section-title">10 Little Gifts For You 🎁</h2>
+
+ <p class="paragraph">
+  I couldn't send you a thousand physical gifts
+  through this screen, so I made you ten little surprises.
+  Open every single one.
+ </p>
+
+ <div class="gift-grid">
+
+  <button class="gift" onclick="openGift(0)">
+   <span class="gift-icon">💌</span><p>Gift One</p>
+  </button>
+
+  <button class="gift" onclick="openGift(1)">
+   <span class="gift-icon">🌹</span><p>Gift Two</p>
+  </button>
+
+  <button class="gift" onclick="openGift(2)">
+   <span class="gift-icon">🧸</span><p>Gift Three</p>
+  </button>
+
+  <button class="gift" onclick="openGift(3)">
+   <span class="gift-icon">🌍</span><p>Gift Four</p>
+  </button>
+
+  <button class="gift" onclick="openGift(4)">
+   <span class="gift-icon">💎</span><p>Gift Five</p>
+  </button>
+
+  <button class="gift" onclick="openGift(5)">
+   <span class="gift-icon">🫂</span><p>Gift Six</p>
+  </button>
+
+  <button class="gift" onclick="openGift(6)">
+   <span class="gift-icon">🌙</span><p>Gift Seven</p>
+  </button>
+
+  <button class="gift" onclick="openGift(7)">
+   <span class="gift-icon">📸</span><p>Gift Eight</p>
+  </button>
+
+  <button class="gift" onclick="openGift(8)">
+   <span class="gift-icon">♾️</span><p>Gift Nine</p>
+  </button>
+
+  <button class="gift" onclick="openGift(9)">
+   <span class="gift-icon">❤️</span><p>The Final Gift</p>
+  </button>
+
+ </div>
+
+ <div id="gift-message" class="hidden">
+  <h2 id="gift-title" class="script" style="font-size:40px"></h2>
+  <p id="gift-text"></p>
+  <br>💗
+ </div>
+
+</section>
+
+<!-- LOVE TRANSLATIONS -->
+
+<section>
+
+ <h2 class="section-title">Love Has No Language</h2>
+
+ <p class="paragraph">
+  Different languages, different words,
+  but somehow they all lead to the same feeling.
+ </p>
+
+ <div class="language">
+  <h3>🇬🇧 English</h3>
+  <p class="translation">
+   "You are the person I want beside me
+   in every chapter of my life."
+  </p>
+ </div>
+
+ <div class="language">
+  <h3>🇵🇰 Urdu</h3>
+  <p class="translation">
+   "تم میری زندگی کا وہ خوبصورت خواب ہو
+   جسے میں حقیقت بنتے دیکھنا چاہتا ہوں۔"
+  </p>
+ </div>
+
+ <div class="language">
+  <h3>🇪🇸 Spanish</h3>
+  <p class="translation">
+   "Quiero compartir todos mis mañanas contigo."
+  </p>
+  <p>I want to share all my tomorrows with you.</p>
+ </div>
+
+</section>
+
+<!-- URDU SHAYARI ONLY -->
+
+<section>
+
+ <h2 class="section-title">کچھ الفاظ تمہارے نام ❤️</h2>
+
+ <div class="glass">
+
+  <p class="big-quote" dir="rtl">
+   فاصلے چاہے جتنے بھی ہوں درمیان،
+   دل کی ہر دھڑکن میں ہو تم یہاں۔
+  </p>
+
+  <div class="divider"></div>
+
+  <p class="big-quote" dir="rtl">
+   نہ چاند کی خواہش، نہ ستاروں کی تلاش،
+   بس تمہارا ساتھ ہو، یہی ہے میری آس۔
+  </p>
+
+  <div class="divider"></div>
+
+  <p class="big-quote" dir="rtl">
+   ایک دن یہ فاصلے بھی ختم ہو جائیں گے،
+   ہم اپنے خوابوں کو حقیقت بنائیں گے۔
+  </p>
+
+  <div class="divider"></div>
+
+  <p class="big-quote" dir="rtl">
+   تم سے ملنے کی امید دل میں سجائے رکھی ہے،
+   ہر آنے والے کل میں تمہاری جگہ بنائے رکھی ہے۔
+  </p>
+
+  <div class="divider"></div>
+
+  <p class="big-quote" dir="rtl">
+   تم میری دعاؤں کا سب سے حسین جواب ہو،
+   میری زندگی کی کہانی کا خوبصورت باب ہو۔
+  </p>
+
+ </div>
+</section>
+
+<!-- FINAL MESSAGE -->
+
+<section>
+
+ <h2 class="section-title">Before You Leave...</h2>
+
+ <div class="glass">
+
+  <div style="font-size:65px">💗</div>
+
+  <p class="big-quote">
+   "If loving you were a journey,
+   I would never wish to reach the end."
+  </p>
+
+  <p class="paragraph">
+   I know I sometimes say silly things.
+   Sometimes I make jokes, sometimes I act childish,
+   and sometimes I struggle to find the right words.
+  </p>
+
+  <p class="paragraph">
+   And honestly, I'd invent a thousand silly stories
+   just to keep you smiling.
+   But when it comes to us, I want my words to be honest
+   and my promises to mean something.
+  </p>
+
+  <p class="paragraph">
+   Thank you for these three years.
+   Thank you for the memories.
+   Thank you for being someone I can dedicate
+   this little universe to.
+  </p>
+
+  <p class="big-quote">
+   "Someday, I'll reach you.
+   Someday, we'll look back at this distance
+   and smile because we made it through."
+  </p>
+
+  <h1 class="script" style="font-size:75px;margin:35px 0">
+   I Love You ❤️
+  </h1>
+
+  <p class="paragraph">
+   Happy Threeld Anniversary, My Love.<br>
+   Today, tomorrow and all the beautiful tomorrows ahead.
+  </p>
+
+  <button class="btn" onclick="finalSurprise()">
+   One Last Surprise 💌
+  </button>
+
+  <div id="final-message" class="hidden">
+   <h2 class="script" style="font-size:48px;margin-top:35px">
+    You're My Favourite Chapter.
+   </h2>
+   <p class="paragraph">
+    And I hope our story never stops being written. ♾️
+   </p>
+  </div>
+
+ </div>
+</section>
+
+<footer>
+ <p>MADE WITH A LITTLE BIT OF HTML</p>
+ <p>AND A WHOLE LOT OF LOVE ❤️</p>
+ <p class="script" style="font-size:40px">Our Little Universe ♾️</p>
+ <p>Happy Threeld Anniversary</p>
+</footer>
+
+</main>
+
+<script>
+
+// UPDATED PASSWORD
+const SECRET = "happy anniversary";
+
+function unlock(){
+ const value=document.getElementById("pass").value
+  .trim().toLowerCase();
+
+ if(value===SECRET){
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("website").classList.remove("hidden");
+  window.scrollTo(0,0);
+ }else{
+  document.getElementById("error").textContent=
+   "Wrong password! Try again, my love. 💗";
+ }
+}
+
+document.getElementById("pass").addEventListener("keydown",e=>{
+ if(e.key==="Enter")unlock();
+});
+
+// ALL TEN GIFTS
+
+const presents=[
+ {
+  title:"A Letter From My Heart 💌",
+  text:"If I could put everything I feel into one letter, it would probably never end. You have become part of so many of my thoughts, plans and dreams. I hope you always remember how much you are appreciated."
+ },
+ {
+  title:"A Thousand Roses 🌹",
+  text:"If every beautiful thought I had about you became a rose, I would need an entire garden. Consider this your little digital bouquet."
+ },
+ {
+  title:"Your Virtual Teddy 🧸",
+  text:"A teddy bear cannot replace a real hug, but until I can be there, imagine this little teddy carrying the warmest hug from me to you."
+ },
+ {
+  title:"Our Future 🌍",
+  text:"I dream of travelling together, discovering beautiful places, having long conversations, sharing meals and creating memories. I hope life gives us the opportunity to experience all those little adventures."
+ },
+ {
+  title:"My Diamond 💎",
+  text:"Something valuable doesn't have to be perfect to be precious. I hope we always recognise the beauty in each other, respect our differences and appreciate what we share."
+ },
+ {
+  title:"A Hug Across The Distance 🫂",
+  text:"Close your eyes for a second and imagine the biggest hug. No internet connection, no screen, no kilometres. Just a moment when we finally get to be together."
+ },
+ {
+  title:"My Moonlight 🌙",
+  text:"Even on the busiest days, I hope you find a peaceful moment to look at the sky and remember that somewhere in this big world, there is someone wishing you happiness."
+ },
+ {
+  title:"Our Memories 📸",
+  text:"Every conversation, every laugh and every silly little moment is a piece of our story. I hope we keep collecting memories that we will laugh about years from now."
+ },
+ {
+  title:"A Dream Of Forever ♾️",
+  text:"I don't know every detail of tomorrow, but I know I would love to keep discovering life with you. One day at a time, one memory at a time."
+ },
+ {
+  title:"The Biggest Gift: My Heart ❤️",
+  text:"Here is my final gift. A little reminder that you matter, that your dreams matter and that you deserve kindness, happiness and respect. Thank you for being part of my story. Happy Anniversary!"
+ }
+];
+
+function openGift(index){
+ const box=document.getElementById("gift-message");
+
+ document.getElementById("gift-title").textContent=
+  presents[index].title;
+
+ document.getElementById("gift-text").textContent=
+  presents[index].text;
+
+ box.classList.remove("hidden");
+
+ box.scrollIntoView({
+  behavior:"smooth",
+  block:"center"
+ });
+}
+
+function finalSurprise(){
+ const message=document.getElementById("final-message");
+ message.classList.remove("hidden");
+ message.scrollIntoView({
+  behavior:"smooth",
+  block:"center"
+ });
+}
+
+// FLOATING HEARTS
+
+const heartContainer=document.getElementById("hearts");
+
+function createHeart(){
+ const heart=document.createElement("div");
+ heart.className="heart";
+ heart.textContent=["♡","♥","💕","💗"][
+  Math.floor(Math.random()*4)
+ ];
+
+ heart.style.left=Math.random()*100+"vw";
+ heart.style.fontSize=(15+Math.random()*25)+"px";
+ heart.style.animationDuration=(8+Math.random()*8)+"s";
+
+ heartContainer.appendChild(heart);
+
+ setTimeout(()=>heart.remove(),16000);
+}
+
+setInterval(createHeart,700);
+
+</script>
+
+</body>
+</html>
